@@ -17,7 +17,7 @@ var fn_addin = function (o, p, t) {
               return `
               <div class="cracked-setBackgroundWrapper">
               <span class="button button-choose fake-file-input list-add-button" id="addPhotoFromURL">+ Add Photo From URL</span>
-              <span class="button button-choose fake-file-input list-add-button">+ Upload Photo</span><br>
+              <span class="button button-choose fake-file-input list-add-button" id="uploadPhoto">+ Upload Photo</span><br>
               <span class="infoText">Cracked by HackedNode</span>
               </div>`;
           },

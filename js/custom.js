@@ -20,3 +20,26 @@ addPhotoFromURLInterval = setInterval(() => {
     clearInterval(addPhotoFromURLInterval)
   }
 }, 1000)
+
+let uploadPhotoInterval = null
+uploadPhotoInterval = setInterval(() => {
+  let elem = document.getElementById('uploadPhoto');
+  if (elem) {
+    elem.onclick = () => { document.getElementById('uploader').click()  }
+    clearInterval(uploadPhotoInterval)
+  }
+}, 1000)
+
+document.getElementById('uploader').addEventListener('change', e => {
+  let input = e.currentTarget
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      localStorage.setItem('background', e.target.result)
+      loadBackgroundFromLocalStorage()
+    };
+
+    reader.readAsDataURL(input.files[0]);
+}
+})
