@@ -34,9 +34,25 @@ var fn_addin = function (d, a, t) {
           main: function (t, e, n, s) {
               var a;
               return (
-                  '<img src="img/logo.svg" class="logo logo-color">\n<img src="img/logo-white.svg" class="logo logo-white">\n<h3>Momentum</h3>\n<p class="made">Personal Dashboard <span id="momo-version">v' +
-                  this.escapeExpression("function" == typeof (a = null != (a = e.version || (null != t ? t.version : t)) ? a : e.helperMissing) ? a.call(t, { name: "version", hash: {}, data: s }) : a) +
-                  '</span></p>\n<p class="thanks">Thank you for your support!</p>\n<p class="links">\n\t<a href="http://momentumdash.com/feedback" target="_blank">Feedback</a>\n\t<a href="http://momentumdash.com" target="_blank">Website</a>\n\t<a href="http://momentumdash.com/blog" target="_blank">Blog</a>\n\t<a href="http://www.instagram.com/momentumdash" target="_blank">Instagram</a>\n\t<a href="https://www.facebook.com/momentumdash" target="_blank">Facebook</a>\n\t<a href="https://twitter.com/momentumdash" target="_blank">Twitter</a>\n</p>\n<div class="footer">\n\t<span class="footer-made">Made with <span class="heart">&#9829;</span> in beautiful BC, Canada</span><span class="separator">・</span><span class="footer-links"><a href="https://momentumdash.com/legal" target="_blank">Terms & Privacy</a></span>\n</div>\n'
+                  `<img src="img/logo.svg" class="logo logo-color">
+                  <img src="img/logo-white.svg" class="logo logo-white">
+                  <h3>Momentum</h3>
+                  <p class="made">Personal Dashboard <span id="momo-version">v
+                  ${this.escapeExpression("function" == typeof (a = null != (a = e.version || (null != t ? t.version : t)) ? a : e.helperMissing) ? a.call(t, { name: "version", hash: {}, data: s }) : a)}
+                  </span></p>
+                  <p class="thanks">
+                    <a href="https://github.com/juliancruzsanchez/momentum-cracked/releases">Check for Updates</a></p>
+                    <p class="links">
+                        <a href="http://momentumdash.com/feedback" target="_blank">Feedback</a>
+                        <a href="http://www.instagram.com/judelucasmusic" target="_blank">Instagram</a>
+                        <a href="https://www.snapchat.com/judelucas20" target="_blank">Snapchat</a>
+                        <a href="https://twitter.com/judelucasmusic" target="_blank">Twitter</a>
+                        <a href="https://github.com/realjuliansanchez" target="_blank">GitHub</a>
+                    </p>
+                    <div class="footer">
+                        <span class="footer-made">Cracked with <span class="heart">&#9829;</span> by <a href="https://github.com/realjuliansanchez">HackedNode</a></span><span class="separator">・</span><span class="footer-links"><a href="https://momentumdash.com/legal" target="_blank">Terms & Privacy</a></span>
+                    </div>
+                `
               );
           },
           useData: !0,
