@@ -1,3 +1,5 @@
+let addPhotoFromURLInterval = null,  uploadPhotoInterval = null
+
 function loadBackgroundFromLocalStorage() {
   const bg = localStorage.getItem('background')
   if (bg !== "" || bg !== null) {
@@ -5,30 +7,35 @@ function loadBackgroundFromLocalStorage() {
   }
 }
 
-window.addPhotoFromURL = function() {
-  localStorage.setItem('background', prompt('Enter URL to wallpaper'))
+function addPhotoFromURL() {
+  const url =  prompt('Enter URL to wallpaper')
+  if (url.includes('http')) {
+    localStorage.setItem('background', url)
+  } else {
+    alert('Invalid URL!')
+    addPhotoFromURL()
+  }
   loadBackgroundFromLocalStorage()
 }
 
-window.addEventListener("load", () => loadBackgroundFromLocalStorage())
-
-let addPhotoFromURLInterval = null
-addPhotoFromURLInterval = setInterval(() => {
-  let elem = document.getElementById('addPhotoFromURL');
-  if (elem) {
-    elem.onclick = addPhotoFromURL
-    clearInterval(addPhotoFromURLInterval)
-  }
-}, 1000)
-
-let uploadPhotoInterval = null
-uploadPhotoInterval = setInterval(() => {
-  let elem = document.getElementById('uploadPhoto');
-  if (elem) {
-    elem.onclick = () => { document.getElementById('uploader').click()  }
-    clearInterval(uploadPhotoInterval)
-  }
-}, 1000)
+function settingsOpened() {
+  addPhotoFromURLInterval = setInterval(() => {
+    let elem = document.getElementById('addPhotoFromURL');
+    if (elem) {
+      elem.onclick = addPhotoFromURL
+      clearInterval(addPhotoFromURLInterval)
+    }
+  }, 1000)
+  
+  
+  uploadPhotoInterval = setInterval(() => {
+    let elem = document.getElementById('uploadPhoto');
+    if (elem) {
+      elem.onclick = () => { document.getElementById('uploader').click()  }
+      clearInterval(uploadPhotoInterval)
+    }
+  }, 1000)
+}
 
 document.getElementById('uploader').addEventListener('change', e => {
   let input = e.currentTarget
