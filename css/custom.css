@@ -44,7 +44,7 @@
 }
 
 .background-info {
-  display: none;
+  display: none !important;
 }
 
 .shake {
