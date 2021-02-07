@@ -11,6 +11,16 @@ const elementFunctions = {
   removeClass(className) {
     this.attr("class",this.attr("class").replace(className, "").trim());
   },
+  addAttributeListener(attribute, callback) {
+    const attrObserver = new MutationObserver((mutations) => {
+      mutations.forEach(mu => {
+        if (mu.type !== "attributes" && mu.attributeName !== attribute) return;
+        callback(this.attr(attribute), mu)
+      });
+    });
+    
+    attrObserver.observe(this, {attributes: true})
+    },
   window: window
 }
 
