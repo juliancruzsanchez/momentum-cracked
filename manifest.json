@@ -29,6 +29,6 @@
 		"run_at": "document_end",
 		"js": ["content-scripts/momoSiteInterop.js"]
 	}],
-	"permissions": ["geolocation", "unlimitedStorage", "*://*.momentumdash.com/*"],
+	"permissions": ["geolocation", "unlimitedStorage", "*://*.momentumdash.com/*", "storage"],
 	"optional_permissions": ["bookmarks", "topSites", "chrome://favicon/"]
 }

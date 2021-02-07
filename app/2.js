@@ -175,7 +175,7 @@
                                           : t._e(),
                                   ]),
                                   t._v(" "),
-                                  t.backgroundSrc ? a("div", { staticClass: "onboarding-bg" }, [a("img", { attrs: { src: t.backgroundSrc } })]) : t._e(),
+                              //    t.backgroundSrc ? a("div", { staticClass: "onboarding-bg" }, [a("img", { attrs: { src: t.backgroundSrc } })]) : t._e(),
                               ],
                               1
                           ),
@@ -911,7 +911,7 @@
                           ]),
                           e._v(" "),
                           a("div", { staticClass: "social-source" }, [
-                              a("img", { staticClass: "social-avatar", attrs: { src: "/img/upgrade-izzy.jpg" } }),
+                              a("img", { staticClass: "social-avatar", attrs: { src: "/img/upgrade-izzy.webp" } }),
                               e._v(" "),
                               a("span", { staticClass: "social-name" }, [e._v("Izzy Piyale-Sheard")]),
                           ]),

@@ -1,0 +1,17 @@
+{
+  "categories": [
+    {
+      "name": "macOS",
+      "wallpapers": [
+        {"name": "Wallpaper 1", "fileName": "wallpaper1.webp"},
+        {"name": "Wallpaper 2", "fileName": "wallpaper2.webp"},
+        {"name": "Wallpaper 3", "fileName": "wallpaper3.webp"},
+        {"name": "Wallpaper 4", "fileName": "wallpaper4.webp"},
+        {"name": "Wallpaper 5", "fileName": "wallpaper5.webp"},
+        {"name": "Wallpaper 6", "fileName": "wallpaper6.webp"},
+        {"name": "Wallpaper 7", "fileName": "wallpaper7.webp"},
+        {"name": "Wallpaper 8", "fileName": "wallpaper8.webp"}
+      ]
+    }  
+  ]
+}

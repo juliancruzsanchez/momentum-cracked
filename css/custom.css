@@ -1,3 +1,6 @@
+:root {
+  --background-transition-length: 0.75s;
+}
 .cracked-setBackgroundWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -5,10 +8,49 @@
   grid-gap: 30px;
 }
 
-.cracked-setBackgroundWrapper .infoText {
+.backgroundImageTiles {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 .imageUploadContainer {
   display: none;
+}
+
+.categoryImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  padding-top: 15px;
+}
+
+.categoryImages div {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+.backgroundImageTiles h3 {
+  text-align: left;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transition: background-image var(--background-transition-length) ease-in-out;
+  transition: background-image var(--background-transition-length) ease-in-out;
+  
+}
+
+.background-info {
+  display: none;
+}
+
+.shake {
+  -webkit-animation-name: shakeX;
+  animation-name: shakeX;
+  animation-duration: 1s;
+  animation-play-state: running;
+  transform: translateZ(0);
 }

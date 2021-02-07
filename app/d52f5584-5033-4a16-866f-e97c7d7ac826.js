@@ -16,9 +16,11 @@ var fn_addin = function (o, p, t) {
           main: function (t, e, i, s) {
               return `
               <div class="cracked-setBackgroundWrapper">
-              <span class="button button-choose fake-file-input list-add-button" id="addPhotoFromURL">+ Add Photo From URL</span>
-              <span class="button button-choose fake-file-input list-add-button" id="uploadPhoto">+ Upload Photo</span><br>
-              <span class="infoText">Cracked by HackedNode</span>
+                <span class="button button-choose fake-file-input list-add-button" id="addPhotoFromURL">+ Add Photo From URL</span>
+                <span class="button button-choose fake-file-input list-add-button" id="uploadPhoto">+ Upload Photo</span>
+                <div class="backgroundImageTiles">
+
+                </div>
               </div>`;
           },
           useData: !0,
@@ -911,7 +913,7 @@ var fn_addin = function (o, p, t) {
                   this.setBackgroundIdAttribute(),
                   this.setTitleAttribute(),
                   this.model.getThumbnailUrl(function (t) {
-                      e.$el.find(".tile-list-image").css("background-image", 'url("' + t + '")'), !1 === e.active && e.$el.find(".tile-list-image").addClass("tile-not-active");
+                 //     e.$el.find(".tile-list-image").css("background-image", 'url("' + t + '")'), !1 === e.active && e.$el.find(".tile-list-image").addClass("tile-not-active");
                   }),
                   this
               );

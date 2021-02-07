@@ -124,7 +124,7 @@
                               source: t.get("source"),
                               fav: t.get("is_favorite"),
                               url: t.get("sourceUrl"),
-                              unsplash: t.get("sourceUrl") && t.get("sourceUrl").includes("unsplash"),
+                              unsplash: false
                           });
                   },
                   updatePhotoDetails(t) {
